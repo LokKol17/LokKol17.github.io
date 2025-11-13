@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mochi Blog</title>
+    <description>Official blog of Mochi Soft, our special corner where we share insights about  game development, stories behind our projects and reflections about the indie universe. Here you&apos;ll find everything from technical tutorials to articles about game design, always with our philosophy that &quot;every detail matters&quot; in creating unique and memorable experiences.</description>
+    <link>https://lokkol17.dev//</link>
+    <atom:link href="https://lokkol17.dev//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 13 Nov 2025 00:38:49 -0300</pubDate>
+    <lastBuildDate>Thu, 13 Nov 2025 00:38:49 -0300</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Review de Engines</title>
+        <description>&lt;p&gt;Engine ou (motor gráfico) é o ambiente gráfico que o seu jogo irá rodar. Elas fornecem acesso descomplicado a diversos recursos muito úteis, que vão desde renderização 2D e 3D até mesmo funcionalidades de geração de efeitos especiais, manipulação de áudio e muito mais!&lt;/p&gt;
+
+&lt;p&gt;Sem elas você precisaria codificar tudo isso do zero, oque pode ser bem problemático quando se quer montar algo mais simples ou de maneira mais rápida.&lt;/p&gt;
+
+&lt;h2 id=&quot;principais-engines&quot;&gt;Principais Engines&lt;/h2&gt;
+&lt;p&gt;Atualmente no mercado temos diversas engines, cada uma com seus pontos fracos e fortes, hoje iremos analisar três delas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Unity&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unreal Engine&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Godot&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;image-caption&quot;&gt;&lt;img src=&quot;/assets/images/posts/engines.png&quot; alt=&quot;Engines&quot; class=&quot;post-image--large&quot; /&gt;
+&lt;em&gt;Unity / Godot / Unreal&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;unity&quot;&gt;Unity&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/unity-ui.png&quot; alt=&quot;Unity UI&quot; class=&quot;post-image--full&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unity é uma das engines mais populares do mercado, especialmente para desenvolvimento indie e mobile. Ela utiliza C# como linguagem principal e oferece uma interface visual intuitiva.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pontos Fortes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Grande comunidade e abundante documentação&lt;/li&gt;
+  &lt;li&gt;Asset Store com milhares de recursos prontos&lt;/li&gt;
+  &lt;li&gt;Multiplataforma (Windows, Mac, Linux, Mobile, Console, WebGL)&lt;/li&gt;
+  &lt;li&gt;Sistema de componentes flexível&lt;/li&gt;
+  &lt;li&gt;Excelente para jogos 2D e 3D&lt;/li&gt;
+  &lt;li&gt;Ferramentas visuais para não-programadores&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Pontos Fracos:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Licenciamento pode ser caro para grandes estúdios&lt;/li&gt;
+  &lt;li&gt;Interface pode ser confusa para iniciantes&lt;/li&gt;
+  &lt;li&gt;Versionamento do projeto pode ser problemático&lt;/li&gt;
+  &lt;li&gt;Performance pode ser limitada em projetos muito grandes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;exemplo-de-código-c&quot;&gt;Exemplo de código (C#)&lt;/h3&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;UnityEngine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PlayerMovement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MonoBehaviour&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;speed&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetAxis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Horizontal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vertical&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetAxis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Vertical&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        
+        &lt;span class=&quot;n&quot;&gt;Vector3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Vector3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;horizontal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vertical&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Translate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;speed&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deltaTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;unreal-engine&quot;&gt;Unreal Engine&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/unreal-ui.png&quot; alt=&quot;Unity UI&quot; class=&quot;post-image--full&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Desenvolvida pela Epic Games, a Unreal Engine é conhecida por seus gráficos de alta qualidade e é amplamente utilizada em jogos AAA.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pontos Fortes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Gráficos de alta qualidade “out of the box”&lt;/li&gt;
+  &lt;li&gt;Blueprint (programação visual) para designers&lt;/li&gt;
+  &lt;li&gt;Gratuita até $1 milhão de receita&lt;/li&gt;
+  &lt;li&gt;Excelente para jogos 3D e realismo&lt;/li&gt;
+  &lt;li&gt;Ferramentas avançadas de iluminação e materiais&lt;/li&gt;
+  &lt;li&gt;Suporte nativo para VR/AR&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Pontos Fracos:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Curva de aprendizado íngreme&lt;/li&gt;
+  &lt;li&gt;Projetos ocupam muito espaço em disco&lt;/li&gt;
+  &lt;li&gt;Pode ser excessiva para jogos simples&lt;/li&gt;
+  &lt;li&gt;Requer hardware mais potente para desenvolvimento&lt;/li&gt;
+  &lt;li&gt;Menos adequada para jogos 2D&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;exemplo-de-código-c-1&quot;&gt;Exemplo de código (C++)&lt;/h3&gt;
+
+&lt;p&gt;No Unreal, você pode usar Blueprints (programação visual) ou C++. Aqui está um exemplo simples:&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// PlayerPawn.h&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;UCLASS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MYGAME_API&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;APlayerPawn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;APawn&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;GENERATED_BODY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;APlayerPawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nl&quot;&gt;protected:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;UPROPERTY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EditAnywhere&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MovementSpeed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;600.0f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SetupPlayerInputComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UInputComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MoveForward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MoveRight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// PlayerPawn.cpp&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;APlayerPawn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MoveForward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;AddMovementInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetActorForwardVector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;APlayerPawn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MoveRight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;AddMovementInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetActorRightVector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;godot&quot;&gt;Godot&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/godot-ui.png&quot; alt=&quot;Unity UI&quot; class=&quot;post-image--full&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Godot é uma engine open-source que vem ganhando popularidade rapidamente, especialmente entre desenvolvedores independentes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pontos Fortes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Completamente gratuita e open-source&lt;/li&gt;
+  &lt;li&gt;Interface limpa e intuitiva&lt;/li&gt;
+  &lt;li&gt;Sistema de nós único e flexível&lt;/li&gt;
+  &lt;li&gt;GDScript (linguagem própria) fácil de aprender&lt;/li&gt;
+  &lt;li&gt;Suporte para C# e C++&lt;/li&gt;
+  &lt;li&gt;Leve e rápida&lt;/li&gt;
+  &lt;li&gt;Excelente para jogos 2D&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Pontos Fracos:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Comunidade menor comparada às outras&lt;/li&gt;
+  &lt;li&gt;Menos recursos de terceiros disponíveis&lt;/li&gt;
+  &lt;li&gt;Ferramentas 3D ainda em desenvolvimento&lt;/li&gt;
+  &lt;li&gt;Documentação limitada em português&lt;/li&gt;
+  &lt;li&gt;Menos suporte para consoles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;exemplo-de-código&quot;&gt;Exemplo de código&lt;/h3&gt;
+
+&lt;h3 id=&quot;godot-gdscript&quot;&gt;Godot (GDScript)&lt;/h3&gt;
+
+&lt;div class=&quot;language-gdscript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CharacterBody2D&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;speed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;300.0&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;_physics_process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_vector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ui_left&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ui_right&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ui_up&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ui_down&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Vector2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ZERO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;velocity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;speed&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;velocity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;velocity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move_toward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Vector2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ZERO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;speed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;move_and_slide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;qual-escolher&quot;&gt;Qual Escolher?&lt;/h2&gt;
+
+&lt;p&gt;A escolha da engine depende muito do seu projeto e experiência:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Para iniciantes&lt;/strong&gt;: Godot ou Unity&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Para jogos 2D&lt;/strong&gt;: Godot ou Unity&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Para jogos 3D realistas&lt;/strong&gt;: Unreal Engine&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Para desenvolvimento mobile&lt;/strong&gt;: Unity&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Para orçamento limitado&lt;/strong&gt;: Godot&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Para projetos comerciais grandes&lt;/strong&gt;: Unity ou Unreal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Como você pode ver, cada engine tem sua própria abordagem com relação a programação:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Unity&lt;/strong&gt; usa C# com uma estrutura orientada a componentes&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unreal&lt;/strong&gt; oferece tanto Blueprints visuais quanto C++ mais complexo&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Godot&lt;/strong&gt; usa GDScript, uma linguagem simples inspirada no Python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Não existe uma engine “perfeita” - cada uma tem suas vantagens dependendo do contexto. O importante é experimentar e encontrar aquela que melhor se adequa ao seu estilo de desenvolvimento e aos requisitos do seu projeto.&lt;/p&gt;
+
+&lt;p&gt;Qual engine você já experimentou? Nos deixe saber aqui nos comentários!&lt;/p&gt;
+
+&lt;p&gt;Aqui vai uma &lt;strong&gt;curiosidade&lt;/strong&gt;: O nosso novo jogo usa a engine &lt;strong&gt;Unity&lt;/strong&gt;!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 07 Nov 2025 16:59:21 -0300</pubDate>
+        <link>https://lokkol17.dev//review/ferramentas/desenvolvimento/2025/11/07/review-de-engines.html</link>
+        <guid isPermaLink="true">https://lokkol17.dev//review/ferramentas/desenvolvimento/2025/11/07/review-de-engines.html</guid>
+        
+        
+        <category>review</category>
+        
+        <category>ferramentas</category>
+        
+        <category>desenvolvimento</category>
+        
+      </item>
+    
+      <item>
+        <title>A Jornada Começa!</title>
+        <description>&lt;p&gt;Olá Mundo! Eu sou Lok, desenvolvedor independente e criador da Mochi Soft.&lt;/p&gt;
+
+&lt;p&gt;Aqui começamos uma série de posts para documentar toda a jornada do desenvolvimento de nosso novo jogo. Vou compartilhar o progresso, desafios, técnicas usadas e, claro, muitas artes e novidades!&lt;/p&gt;
+
+&lt;p&gt;A Mochi Soft nasceu da paixão por criar experiências únicas, e este blog será o espaço para dividir tudo isso com vocês.&lt;/p&gt;
+
+&lt;p class=&quot;image-caption&quot;&gt;&lt;img src=&quot;/assets/images/posts/yuki-face-sketch.png&quot; alt=&quot;Arte inicial do jogo&quot; class=&quot;post-image--medium&quot; /&gt;
+&lt;em&gt;Sketch da Yuki&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Fique à vontade para acompanhar, comentar e sugerir assuntos!&lt;/p&gt;
+
+&lt;p&gt;Vamos juntos nessa aventura!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 06 Nov 2025 23:27:00 -0300</pubDate>
+        <link>https://lokkol17.dev//devlog/2025/11/06/a-jornada-comeca.html</link>
+        <guid isPermaLink="true">https://lokkol17.dev//devlog/2025/11/06/a-jornada-comeca.html</guid>
+        
+        
+        <category>devlog</category>
+        
+      </item>
+    
+  </channel>
+</rss>

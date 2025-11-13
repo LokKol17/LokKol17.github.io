@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <title>All Posts | Mochi blog</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Mochi Blog" href="https://lokkol17.dev//feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://lokkol17.dev//sitemap.xml">
+</head>
+<body>
+    
+    <header class="default__header">
+        <img class="default__header__img" src="/assets/images/mochi-soft.png" alt="Mochi Soft Logo">
+        <h1 class="default__header__title">Mochi Blog</h1>
+    </header>
+    
+    <nav class="default__nav">
+        
+            <a href="/" >
+                Home
+            </a>
+        
+            <a href="/posts" >
+                Posts
+            </a>
+        
+            <a href="/categorias" >
+                Categorias
+            </a>
+        
+            <a href="/about" >
+                About
+            </a>
+        
+            <a href="/feed.xml" >
+                RSS
+            </a>
+        
+    </nav>
+    <div class="posts-page">
+  <h1 class="posts__title">Posts</h1>
+
+  <!-- Mini filtro de categorias -->
+  <div class="posts-mini-filters">
+    <span class="filter-label">Filtrar por:</span>
+    <div class="mini-filters">
+      <button class="mini-filter-btn active" data-category="all">Todos</button>
+      
+      
+        
+          <button class="mini-filter-btn" data-category="desenvolvimento">Desenvolvimento</button>
+        
+      
+        
+          <button class="mini-filter-btn" data-category="devlog">Devlog</button>
+        
+      
+        
+          <button class="mini-filter-btn" data-category="ferramentas">Ferramentas</button>
+        
+      
+        
+          <button class="mini-filter-btn" data-category="review">Review</button>
+        
+      
+      <a href="/categorias" class="mini-filter-btn mini-filter-btn--more">Ver mais</a>
+    </div>
+  </div>
+
+  <ul class="posts__list" id="posts-list">
+    
+      <li class="posts__list__item" data-categories="review ferramentas desenvolvimento ">
+        <h2><a href="/review/ferramentas/desenvolvimento/2025/11/07/review-de-engines.html">Review de Engines</a></h2>
+        <p>Engine ou (motor gráfico) é o ambiente gráfico que o seu jogo irá rodar. Elas fornecem acesso descomplicado a diversos recursos muito úteis, que vão desde renderização 2D e 3D...</p>
+        
+        <div class="post-meta">
+          <span class="post-date">07 Nov 2025</span>
+          
+            
+            
+              <span class="post-author">Por Lok</span>
+            
+          
+          <div class="post-categories">
+            
+              <span class="category" data-category="review">review</span>
+            
+              <span class="category" data-category="ferramentas">ferramentas</span>
+            
+              <span class="category" data-category="desenvolvimento">desenvolvimento</span>
+            
+          </div>
+        </div>
+        
+        <div class="read-more">
+          <a href="/review/ferramentas/desenvolvimento/2025/11/07/review-de-engines.html">Continuar lendo</a>
+        </div>
+      </li>
+    
+      <li class="posts__list__item" data-categories="devlog ">
+        <h2><a href="/devlog/2025/11/06/a-jornada-comeca.html">A Jornada Começa!</a></h2>
+        <p>Olá Mundo! Eu sou Lok, desenvolvedor independente e criador da Mochi Soft.
+</p>
+        
+        <div class="post-meta">
+          <span class="post-date">06 Nov 2025</span>
+          
+            
+            
+              <span class="post-author">Por Mochi Team</span>
+            
+          
+          <div class="post-categories">
+            
+              <span class="category" data-category="devlog">devlog</span>
+            
+          </div>
+        </div>
+        
+        <div class="read-more">
+          <a href="/devlog/2025/11/06/a-jornada-comeca.html">Continuar lendo</a>
+        </div>
+      </li>
+    
+  </ul>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const miniFilterBtns = document.querySelectorAll('.mini-filter-btn[data-category]');
+    const posts = document.querySelectorAll('.posts__list__item[data-categories]');
+    
+    function filterMiniPosts(category) {
+        posts.forEach(post => {
+            const postCategories = post.dataset.categories.trim().split(' ');
+            
+            if (category === 'all' || postCategories.includes(category)) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+    }
+    
+    miniFilterBtns.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            // Remover classe active
+            miniFilterBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Adicionar classe active
+            this.classList.add('active');
+            
+            // Filtrar
+            filterMiniPosts(category);
+        });
+    });
+});
+</script>
+</body>
+</html>

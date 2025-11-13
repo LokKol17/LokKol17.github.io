@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+
+# Disallow certain paths
+Disallow: /assets/css/*.map
+Disallow: /_site/
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /.git/
+Disallow: /.jekyll-cache/
+Disallow: /.sass-cache/

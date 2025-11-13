@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <title>Posts por Categoria | Mochi blog</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Mochi Blog" href="https://lokkol17.dev//feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://lokkol17.dev//sitemap.xml">
+</head>
+<body>
+    
+    <header class="default__header">
+        <img class="default__header__img" src="/assets/images/mochi-soft.png" alt="Mochi Soft Logo">
+        <h1 class="default__header__title">Mochi Blog</h1>
+    </header>
+    
+    <nav class="default__nav">
+        
+            <a href="/" >
+                Home
+            </a>
+        
+            <a href="/posts" >
+                Posts
+            </a>
+        
+            <a href="/categorias" >
+                Categorias
+            </a>
+        
+            <a href="/about" >
+                About
+            </a>
+        
+            <a href="/feed.xml" >
+                RSS
+            </a>
+        
+    </nav>
+    <div class="categories-page">
+    <h1 class="categories-page__title">Posts por Categoria</h1>
+    
+    <!-- Filtros de Categoria -->
+    <div class="category-filters">
+        <button class="filter-btn active" data-category="all">
+            Todos os Posts
+            <span class="post-count" id="count-all">2</span>
+        </button>
+        
+        
+        
+            
+                
+                <button class="filter-btn" data-category="desenvolvimento">
+                    Desenvolvimento
+                    <span class="post-count">1</span>
+                </button>
+            
+        
+            
+                
+                <button class="filter-btn" data-category="devlog">
+                    Devlog
+                    <span class="post-count">1</span>
+                </button>
+            
+        
+            
+                
+                <button class="filter-btn" data-category="ferramentas">
+                    Ferramentas
+                    <span class="post-count">1</span>
+                </button>
+            
+        
+            
+                
+                <button class="filter-btn" data-category="review">
+                    Review
+                    <span class="post-count">1</span>
+                </button>
+            
+        
+    </div>
+
+    <!-- Lista de Posts Filtráveis -->
+    <div class="filtered-posts" id="posts-container">
+        
+            <article class="filtered-post" data-categories="review ferramentas desenvolvimento ">
+                <div class="filtered-post__header">
+                    <h2 class="filtered-post__title">
+                        <a href="/review/ferramentas/desenvolvimento/2025/11/07/review-de-engines.html">Review de Engines</a>
+                    </h2>
+                    <time class="filtered-post__date">07 Nov 2025</time>
+                </div>
+                
+                <p class="filtered-post__excerpt">
+                    Engine ou (motor gráfico) é o ambiente gráfico que o seu jogo irá rodar. Elas fornecem acesso descomplicado a diversos recursos muito úteis, que vão...
+                </p>
+                
+                <div class="filtered-post__meta">
+                    <div class="filtered-post__info">
+                        
+                            
+                            
+                                <span class="post-author-tag">Lok</span>
+                            
+                        
+                        
+                        <div class="filtered-post__categories">
+                            
+                                <span class="category-tag" data-category="review">review</span>
+                            
+                                <span class="category-tag" data-category="ferramentas">ferramentas</span>
+                            
+                                <span class="category-tag" data-category="desenvolvimento">desenvolvimento</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <a href="/review/ferramentas/desenvolvimento/2025/11/07/review-de-engines.html" class="filtered-post__link">Ler mais →</a>
+                </div>
+            </article>
+        
+            <article class="filtered-post" data-categories="devlog ">
+                <div class="filtered-post__header">
+                    <h2 class="filtered-post__title">
+                        <a href="/devlog/2025/11/06/a-jornada-comeca.html">A Jornada Começa!</a>
+                    </h2>
+                    <time class="filtered-post__date">06 Nov 2025</time>
+                </div>
+                
+                <p class="filtered-post__excerpt">
+                    Olá Mundo! Eu sou Lok, desenvolvedor independente e criador da Mochi Soft.
+
+                </p>
+                
+                <div class="filtered-post__meta">
+                    <div class="filtered-post__info">
+                        
+                            
+                            
+                                <span class="post-author-tag">Mochi Team</span>
+                            
+                        
+                        
+                        <div class="filtered-post__categories">
+                            
+                                <span class="category-tag" data-category="devlog">devlog</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <a href="/devlog/2025/11/06/a-jornada-comeca.html" class="filtered-post__link">Ler mais →</a>
+                </div>
+            </article>
+        
+    </div>
+
+    <!-- Mensagem quando não há posts -->
+    <div class="no-posts" id="no-posts" style="display: none;">
+        <h3>Nenhum post encontrado nesta categoria</h3>
+        <p>Tente selecionar uma categoria diferente ou volte para "Todos os Posts".</p>
+    </div>
+</div>
+
+<!-- JavaScript para filtros -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const posts = document.querySelectorAll('.filtered-post');
+    const postsContainer = document.getElementById('posts-container');
+    const noPostsMsg = document.getElementById('no-posts');
+    
+    // Função para filtrar posts
+    function filterPosts(category) {
+        let visibleCount = 0;
+        
+        posts.forEach(post => {
+            const postCategories = post.dataset.categories.trim().split(' ');
+            
+            if (category === 'all' || postCategories.includes(category)) {
+                post.style.display = 'block';
+                // Animação de entrada
+                post.style.opacity = '0';
+                post.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    post.style.transition = 'all 0.3s ease';
+                    post.style.opacity = '1';
+                    post.style.transform = 'translateY(0)';
+                }, visibleCount * 50); // Delay escalonado
+                
+                visibleCount++;
+            } else {
+                post.style.display = 'none';
+            }
+        });
+        
+        // Mostrar/esconder mensagem de "nenhum post"
+        if (visibleCount === 0) {
+            noPostsMsg.style.display = 'block';
+            postsContainer.style.display = 'none';
+        } else {
+            noPostsMsg.style.display = 'none';
+            postsContainer.style.display = 'block';
+        }
+        
+        return visibleCount;
+    }
+    
+    // Adicionar event listeners aos botões
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            // Remover classe active de todos os botões
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Adicionar classe active ao botão clicado
+            this.classList.add('active');
+            
+            // Filtrar posts
+            filterPosts(category);
+            
+            // Scroll suave para os posts
+            document.querySelector('.filtered-posts').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+    
+    // Filtro inicial
+    filterPosts('all');
+});
+</script>
+
+</body>
+</html>

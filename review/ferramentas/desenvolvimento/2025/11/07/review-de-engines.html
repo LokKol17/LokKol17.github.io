@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <title>Review de Engines | Mochi blog</title>
+    <link rel="stylesheet" href="/assets/css/md.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <header class="default__header post__header">
+        <img class="default__header__img post__header__img" src="/assets/images/mochi-soft.png" alt="Mochi Soft Logo">
+        <h1 class="default__header__title post__header__title">Mochi Blog</h1>
+    </header>
+    <nav class="default__nav post__nav">
+        
+            <a class="default__nav__link" href="/" >
+                Home
+            </a>
+        
+            <a class="default__nav__link" href="/posts" >
+                Posts
+            </a>
+        
+            <a class="default__nav__link" href="/categorias" >
+                Categorias
+            </a>
+        
+            <a class="default__nav__link" href="/about" >
+                About
+            </a>
+        
+            <a class="default__nav__link" href="/feed.xml" >
+                RSS
+            </a>
+        
+    </nav>
+    <main class="default__main post__main">
+        <h1>Review de Engines</h1>
+        
+        
+            
+<div class="post-meta-author">
+    
+        <img src="/assets/images/authors/lok-avatar.png" alt="Lok" class="post-author-avatar">
+        <span class="post-author-name">Por Lok</span>
+    
+</div>
+
+        
+        
+        <p>Engine ou (motor gráfico) é o ambiente gráfico que o seu jogo irá rodar. Elas fornecem acesso descomplicado a diversos recursos muito úteis, que vão desde renderização 2D e 3D até mesmo funcionalidades de geração de efeitos especiais, manipulação de áudio e muito mais!</p>
+
+<p>Sem elas você precisaria codificar tudo isso do zero, oque pode ser bem problemático quando se quer montar algo mais simples ou de maneira mais rápida.</p>
+
+<h2 id="principais-engines">Principais Engines</h2>
+<p>Atualmente no mercado temos diversas engines, cada uma com seus pontos fracos e fortes, hoje iremos analisar três delas:</p>
+<ul>
+  <li><strong>Unity</strong></li>
+  <li><strong>Unreal Engine</strong></li>
+  <li><strong>Godot</strong></li>
+</ul>
+
+<p class="image-caption"><img src="/assets/images/posts/engines.png" alt="Engines" class="post-image--large" />
+<em>Unity / Godot / Unreal</em></p>
+
+<h2 id="unity">Unity</h2>
+
+<p><img src="/assets/images/posts/unity-ui.png" alt="Unity UI" class="post-image--full" /></p>
+
+<p>Unity é uma das engines mais populares do mercado, especialmente para desenvolvimento indie e mobile. Ela utiliza C# como linguagem principal e oferece uma interface visual intuitiva.</p>
+
+<p><strong>Pontos Fortes:</strong></p>
+<ul>
+  <li>Grande comunidade e abundante documentação</li>
+  <li>Asset Store com milhares de recursos prontos</li>
+  <li>Multiplataforma (Windows, Mac, Linux, Mobile, Console, WebGL)</li>
+  <li>Sistema de componentes flexível</li>
+  <li>Excelente para jogos 2D e 3D</li>
+  <li>Ferramentas visuais para não-programadores</li>
+</ul>
+
+<p><strong>Pontos Fracos:</strong></p>
+<ul>
+  <li>Licenciamento pode ser caro para grandes estúdios</li>
+  <li>Interface pode ser confusa para iniciantes</li>
+  <li>Versionamento do projeto pode ser problemático</li>
+  <li>Performance pode ser limitada em projetos muito grandes</li>
+</ul>
+
+<h3 id="exemplo-de-código-c">Exemplo de código (C#)</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">PlayerMovement</span> <span class="p">:</span> <span class="n">MonoBehaviour</span> 
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">float</span> <span class="n">speed</span> <span class="p">=</span> <span class="m">5f</span><span class="p">;</span>
+    
+    <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span> 
+    <span class="p">{</span>
+        <span class="kt">float</span> <span class="n">horizontal</span> <span class="p">=</span> <span class="n">Input</span><span class="p">.</span><span class="nf">GetAxis</span><span class="p">(</span><span class="s">"Horizontal"</span><span class="p">);</span>
+        <span class="kt">float</span> <span class="n">vertical</span> <span class="p">=</span> <span class="n">Input</span><span class="p">.</span><span class="nf">GetAxis</span><span class="p">(</span><span class="s">"Vertical"</span><span class="p">);</span>
+        
+        <span class="n">Vector3</span> <span class="n">movement</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">horizontal</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">vertical</span><span class="p">);</span>
+        <span class="n">transform</span><span class="p">.</span><span class="nf">Translate</span><span class="p">(</span><span class="n">movement</span> <span class="p">*</span> <span class="n">speed</span> <span class="p">*</span> <span class="n">Time</span><span class="p">.</span><span class="n">deltaTime</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="unreal-engine">Unreal Engine</h2>
+
+<p><img src="/assets/images/posts/unreal-ui.png" alt="Unity UI" class="post-image--full" /></p>
+
+<p>Desenvolvida pela Epic Games, a Unreal Engine é conhecida por seus gráficos de alta qualidade e é amplamente utilizada em jogos AAA.</p>
+
+<p><strong>Pontos Fortes:</strong></p>
+<ul>
+  <li>Gráficos de alta qualidade “out of the box”</li>
+  <li>Blueprint (programação visual) para designers</li>
+  <li>Gratuita até $1 milhão de receita</li>
+  <li>Excelente para jogos 3D e realismo</li>
+  <li>Ferramentas avançadas de iluminação e materiais</li>
+  <li>Suporte nativo para VR/AR</li>
+</ul>
+
+<p><strong>Pontos Fracos:</strong></p>
+<ul>
+  <li>Curva de aprendizado íngreme</li>
+  <li>Projetos ocupam muito espaço em disco</li>
+  <li>Pode ser excessiva para jogos simples</li>
+  <li>Requer hardware mais potente para desenvolvimento</li>
+  <li>Menos adequada para jogos 2D</li>
+</ul>
+
+<h3 id="exemplo-de-código-c-1">Exemplo de código (C++)</h3>
+
+<p>No Unreal, você pode usar Blueprints (programação visual) ou C++. Aqui está um exemplo simples:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// PlayerPawn.h</span>
+<span class="n">UCLASS</span><span class="p">()</span>
+<span class="k">class</span> <span class="nc">MYGAME_API</span> <span class="n">APlayerPawn</span> <span class="o">:</span> <span class="k">public</span> <span class="n">APawn</span>
+<span class="p">{</span>
+    <span class="n">GENERATED_BODY</span><span class="p">()</span>
+
+<span class="nl">public:</span>
+    <span class="n">APlayerPawn</span><span class="p">();</span>
+
+<span class="nl">protected:</span>
+    <span class="n">UPROPERTY</span><span class="p">(</span><span class="n">EditAnywhere</span><span class="p">)</span>
+    <span class="kt">float</span> <span class="n">MovementSpeed</span> <span class="o">=</span> <span class="mf">600.0f</span><span class="p">;</span>
+    
+    <span class="k">virtual</span> <span class="kt">void</span> <span class="n">SetupPlayerInputComponent</span><span class="p">(</span><span class="k">class</span> <span class="nc">UInputComponent</span><span class="o">*</span> <span class="n">InputComponent</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+    
+    <span class="kt">void</span> <span class="n">MoveForward</span><span class="p">(</span><span class="kt">float</span> <span class="n">Value</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="n">MoveRight</span><span class="p">(</span><span class="kt">float</span> <span class="n">Value</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// PlayerPawn.cpp</span>
+<span class="kt">void</span> <span class="n">APlayerPawn</span><span class="o">::</span><span class="n">MoveForward</span><span class="p">(</span><span class="kt">float</span> <span class="n">Value</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Value</span> <span class="o">!=</span> <span class="mf">0.0f</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">AddMovementInput</span><span class="p">(</span><span class="n">GetActorForwardVector</span><span class="p">(),</span> <span class="n">Value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">APlayerPawn</span><span class="o">::</span><span class="n">MoveRight</span><span class="p">(</span><span class="kt">float</span> <span class="n">Value</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Value</span> <span class="o">!=</span> <span class="mf">0.0f</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">AddMovementInput</span><span class="p">(</span><span class="n">GetActorRightVector</span><span class="p">(),</span> <span class="n">Value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="godot">Godot</h2>
+
+<p><img src="/assets/images/posts/godot-ui.png" alt="Unity UI" class="post-image--full" /></p>
+
+<p>Godot é uma engine open-source que vem ganhando popularidade rapidamente, especialmente entre desenvolvedores independentes.</p>
+
+<p><strong>Pontos Fortes:</strong></p>
+<ul>
+  <li>Completamente gratuita e open-source</li>
+  <li>Interface limpa e intuitiva</li>
+  <li>Sistema de nós único e flexível</li>
+  <li>GDScript (linguagem própria) fácil de aprender</li>
+  <li>Suporte para C# e C++</li>
+  <li>Leve e rápida</li>
+  <li>Excelente para jogos 2D</li>
+</ul>
+
+<p><strong>Pontos Fracos:</strong></p>
+<ul>
+  <li>Comunidade menor comparada às outras</li>
+  <li>Menos recursos de terceiros disponíveis</li>
+  <li>Ferramentas 3D ainda em desenvolvimento</li>
+  <li>Documentação limitada em português</li>
+  <li>Menos suporte para consoles</li>
+</ul>
+
+<h3 id="exemplo-de-código">Exemplo de código</h3>
+
+<h3 id="godot-gdscript">Godot (GDScript)</h3>
+
+<div class="language-gdscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">extends</span> <span class="n">CharacterBody2D</span>
+
+<span class="err">@</span><span class="k">export</span> <span class="k">var</span> <span class="n">speed</span> <span class="o">=</span> <span class="mf">300.0</span>
+
+<span class="k">func</span> <span class="nf">_physics_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
+    <span class="k">var</span> <span class="n">direction</span> <span class="o">=</span> <span class="n">Input</span><span class="o">.</span><span class="n">get_vector</span><span class="p">(</span><span class="s2">"ui_left"</span><span class="p">,</span> <span class="s2">"ui_right"</span><span class="p">,</span> <span class="s2">"ui_up"</span><span class="p">,</span> <span class="s2">"ui_down"</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">direction</span> <span class="o">!=</span> <span class="kt">Vector2</span><span class="o">.</span><span class="n">ZERO</span><span class="p">:</span>
+        <span class="n">velocity</span> <span class="o">=</span> <span class="n">direction</span> <span class="o">*</span> <span class="n">speed</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">velocity</span> <span class="o">=</span> <span class="n">velocity</span><span class="o">.</span><span class="n">move_toward</span><span class="p">(</span><span class="kt">Vector2</span><span class="o">.</span><span class="n">ZERO</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>
+    
+    <span class="n">move_and_slide</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="qual-escolher">Qual Escolher?</h2>
+
+<p>A escolha da engine depende muito do seu projeto e experiência:</p>
+
+<ul>
+  <li><strong>Para iniciantes</strong>: Godot ou Unity</li>
+  <li><strong>Para jogos 2D</strong>: Godot ou Unity</li>
+  <li><strong>Para jogos 3D realistas</strong>: Unreal Engine</li>
+  <li><strong>Para desenvolvimento mobile</strong>: Unity</li>
+  <li><strong>Para orçamento limitado</strong>: Godot</li>
+  <li><strong>Para projetos comerciais grandes</strong>: Unity ou Unreal</li>
+</ul>
+
+<p>Como você pode ver, cada engine tem sua própria abordagem com relação a programação:</p>
+<ul>
+  <li><strong>Unity</strong> usa C# com uma estrutura orientada a componentes</li>
+  <li><strong>Unreal</strong> oferece tanto Blueprints visuais quanto C++ mais complexo</li>
+  <li><strong>Godot</strong> usa GDScript, uma linguagem simples inspirada no Python</li>
+</ul>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Não existe uma engine “perfeita” - cada uma tem suas vantagens dependendo do contexto. O importante é experimentar e encontrar aquela que melhor se adequa ao seu estilo de desenvolvimento e aos requisitos do seu projeto.</p>
+
+<p>Qual engine você já experimentou? Nos deixe saber aqui nos comentários!</p>
+
+<p>Aqui vai uma <strong>curiosidade</strong>: O nosso novo jogo usa a engine <strong>Unity</strong>!</p>
+
+        
+        
+            
+
+<div class="author-info">
+    <div class="author-info__avatar">
+        <img src="/assets/images/authors/lok-avatar.png" alt="Lok" class="author-avatar">
+    </div>
+    <div class="author-info__details">
+        <h4 class="author-name">Lok - Desenvolvedor</h4>
+        <p class="author-role">Fundador & Desenvolvedor</p>
+        <p class="author-bio">Desenvolvedor independente e criador da Mochi Soft. Apaixonado por criar experiências únicas em jogos indie.</p>
+        
+        
+        <div class="author-social">
+            
+                <a href="https://mochisoft.com" class="author-link" target="_blank" rel="noopener">
+                    <span class="social-icon">🌐</span> Website
+                </a>
+            
+            
+                <a href="https://twitter.com/lokmochi" class="author-link" target="_blank" rel="noopener">
+                    <span class="social-icon">🐦</span> Twitter
+                </a>
+            
+            
+                <a href="https://github.com/lokmochi" class="author-link" target="_blank" rel="noopener">
+                    <span class="social-icon">💻</span> GitHub
+                </a>
+            
+            
+                <a href="mailto:lok@mochisoft.com" class="author-link">
+                    <span class="social-icon">📧</span> Email
+                </a>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+        
+        
+        
+<div class="comments-section">
+    <hr>
+    <h3 class="comments-title">Comentários</h3>
+    <div id="disqus_thread"></div>
+    
+    <script>
+        var disqus_config = function () {
+            this.page.url = "https://lokkol17.dev//review/ferramentas/desenvolvimento/2025/11/07/review-de-engines.html";
+            this.page.identifier = "/review/ferramentas/desenvolvimento/2025/11/07/review-de-engines";
+        };
+        
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://mochisoft.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+    <noscript>
+        Por favor, habilite o JavaScript para ver os 
+        <a href="https://disqus.com/?ref_noscript">comentários do Disqus</a>.
+    </noscript>
+</div>
+
+
+    </main>
+</body>
+</html>
